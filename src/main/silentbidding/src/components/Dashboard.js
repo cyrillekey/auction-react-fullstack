@@ -3,8 +3,8 @@ import './Dashboard.css'
 import axios from 'axios';
 import { Navigate} from 'react-router-dom';
 class Dashboard extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             display:'hide',
             products:[],
