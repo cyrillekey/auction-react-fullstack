@@ -1,0 +1,156 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    background: #EEEEEE;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .sub-body {
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    width: 540px;
+  }
+  
+  .header {
+    background: #2B0F5D;
+    color: #A27BE9;
+    padding: 24px 0 21px;
+    text-align: center;
+  }
+  
+  .price {
+    color: #FFFFFF;
+    display: flex;
+    margin: 0 0 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .price__dollar,
+  .price__time {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+  
+  .desc {
+    font-family: "Bitter", serif;
+    margin: 0;
+  }
+  
+  .pay-select {
+    background: #F3F3F3;
+    display: flex;
+    font-size: 13px;
+    padding: 24px 0;
+    text-align: center;
+    justify-content: space-around;
+  }
+  .pay-select .pay-select--card,
+  .pay-select .pay-select--paypal {
+    position: relative;
+  }
+  .pay-select .is-active:after {
+    border-bottom: 10px solid #FFFFFF;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -24px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    width: 0;
+  }
+  .pay-select p {
+    margin: 0;
+  }
+  
+  .pay-select__item {
+    width: 48%;
+  }
+  .pay-select__item:hover {
+    cursor: pointer;
+  }
+  
+  .separator {
+    background: #BABABA;
+    height: 60px;
+    width: 1px;
+  }
+  
+  .select-body {
+    padding: 32px;
+    text-align: center;
+  }
+  
+  .select-body--paypal {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    font-family: "Bitter", serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .select-body__content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: visibility 0.3s, opacity 0.3s ease, height 0.3s ease 0.3s, transform 0.2s ease 0.2s;
+    visibility: hidden;
+  }
+  .select-body__content.is-active {
+    height: 380px;
+    opacity: 1;
+    transform: none;
+    transition: visibility 0.3s, opacity 0.3s ease, height 0.3s ease 0.3s, transform 0.2s ease;
+    visibility: visible;
+  }
+  .select-body__content.is-active.select-body--paypal {
+    height: 80px;
+  }
+  
+  .card-input {
+    border: 1px solid #ECECEC;
+    font-family: "Montserrat", sans-serif;
+    height: 32px;
+    margin-bottom: 18px;
+    padding: 4px 8px;
+  }
+  
+  .date__container {
+    display: flex;
+  }
+  
+  #expiration-month {
+    border-right: none;
+  }
+  
+  .braintree-hosted-fields-invalid {
+    border-color: #EB5757;
+  }
+  
+  #submit {
+    background: #000000;
+    border: none;
+    border-radius: 30px;
+    color: #FFFFFF;
+    margin: px auto 0;
+    padding: 18px;
+    width: 315px;
+  }

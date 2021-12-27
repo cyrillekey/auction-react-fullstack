@@ -1,0 +1,1566 @@
+html,
+body {
+  background-color: #f7f7f7;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  width: 100%;
+}
+
+#Header {
+  
+  width: 100%;
+  height: 150px;
+  border-bottom: solid 37px #555555;
+
+}
+
+#tsaHeader .show-768,
+#tsaHeader .show-600,
+#tsaHeader .show-414 {
+  display: none;
+}
+
+#tsaHeader {
+
+  margin: 0px auto;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: normal;
+  white-space: nowrap;
+  padding: 0px 10px;
+}
+
+#tsaHeader p {
+  margin: 0px;
+}
+
+#tsaHeader #tsaLogo  {
+  display: block;
+  width:150px;
+  height: 57px;
+  
+  font-size: 1.5em;
+}
+.noStyle{
+  text-decoration: none;
+  color: black;
+
+}
+link{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+link:hover{
+  color: red;
+}
+
+#tsaHeader tsaHeaderRow1 a:hover {
+  color: #000000;
+}
+
+#tsaHeader ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#tsaHeader li {
+  display: inline-block;
+}
+#tsaHeader li a {
+  vertical-align: middle;
+}
+
+#tsaHeader .bold-text {
+  text-shadow: rgba(0, 0, 0, 1) 0 0 0px;
+}
+
+#tsaHeader .small-text {
+  font-size: 0.750em;
+}
+
+#tsaHeader .red-text {
+  color: #ED3025;
+}
+
+#tsaHeader .left {
+  float: left;
+}
+
+#tsaHeader .right {
+  float: right;
+}
+
+#tsaHeaderRow1,
+#tsaHeaderRow2,
+#tsaHeaderRow3 {
+  width: 100%;
+  float: left;
+  padding: 4px 0px 0px 0px;
+}
+
+#tsaHeaderTextPromo {
+  float: left;
+  font-size: 0.813em;
+  margin-right: 10px;
+}
+
+#tsaHeaderTextPromo a {
+  color: #CC0000;
+  font-weight: bold;
+  display: block;
+  padding: 10px 9px 10px 0px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) right -396px no-repeat;
+}
+
+#tsaHeaderTextPromo a:hover {
+  color: #E10000;
+}
+
+#tsaTopMenu1,
+#tsaTopMenu2 {
+  display: inline-block;
+  margin: 0px;
+}
+
+#tsaTopMenu1 li a,
+#tsaTopMenu2 li a {
+  display: block;
+  font-size: 0.813em;
+  padding: 10px 5px;
+}
+
+#tsaHeader #tsaStoreLocator {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 1px -600px no-repeat;
+  padding: 10px 0px 10px 15px;
+  margin-left: 5px;
+}
+
+#tsaStoreLocator::after {
+  content: "";
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 3px -505px no-repeat;
+  padding-left: 10px;
+}
+
+#tsaWeeklyAd span {
+  text-decoration: underline;
+}
+
+#tsaMyAccount {
+  float: left;
+  display: block;
+  height: 100%;
+  margin-right: 15px;
+  padding: 8px 10px 16px 0px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 0px -100px no-repeat;
+
+}
+
+#tsaCart {
+  float: left;
+  display: block;
+  padding: 8px 0px 0px 0px;
+  
+}
+
+#tsaCart,
+#tsaMyAccount {
+  padding-top: 10px;
+}
+
+#tsaCart p,
+#tsaMyAccount p {
+  line-height: 100%;
+}
+
+#tsaMyAccount a,
+#tsaCart a {
+  padding-left: 34px;
+}
+
+#tsaSearch {
+  float: left;
+  width: 54%;
+  background-color: #E4E4E4;
+  white-space: nowrap;
+  padding: 2px;
+  margin: 0px 14px;
+  max-height: 52px;
+  padding: 0px;
+  border: 2px solid #e4e4e4;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+#headerSearchForm {
+  margin: 0px;
+  padding: 2px;
+  background-color: #ffffff;
+  border: solid 2px #555555;
+  height: 44px;
+}
+
+#tsaSearch:hover #headerSearchForm {
+  border-color: #888888;
+}
+
+#tsaSearch input[type=search] {
+  color: #333333;
+}
+
+#sli_search_1 {
+  width: 100%;
+  height: 100%;
+  margin: 0px !important;
+  padding: 0px 50px 0px 6px;
+  padding: 0px\9;
+  /* IE8 HACK */
+  
+  font-size: 1em;
+  color: #999999;
+  background-color: none;
+  border: none !important;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+}
+
+#sli_search_1:focus {
+  color: #000000;
+}
+
+input:focus {
+  outline: none;
+}
+
+#tsaSearch input[type=submit] {
+  float: right;
+  position: relative;
+  top: -44px;
+  height: 100%;
+  width: 65px;
+  background-color: #666666;
+  border: solid 1px #444444;
+  color: #ffffff;
+  font-size: 0.813em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-box-shadow: inset 0 0 10px #777;
+  -webkit-box-shadow: inset 0 0 10px #777;
+  box-shadow: inset 0 0 10px #777;
+}
+
+
+#tsaSearch input[type=submit]:hover {
+  background-color: #555;
+  border-color: #666666;
+  -moz-box-shadow: inset 0 0 10px #444;
+  -webkit-box-shadow: inset 0 0 10px #444;
+  box-shadow: inset 0 0 10px #444;
+}
+#tsaNav {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+#tsaNav .main-nav {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+#tsaNav li {
+  white-space: nowrap;
+  text-align: center;
+}
+
+#tsaNav>li,
+nav>li {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) center -1768px no-repeat;
+}
+
+#tsaNav>li:hover,
+nav>li:hover {
+  background-position: center -1780px;
+}
+
+#tsaNav li a {
+  color: #ffffff;
+  display: block;
+  padding: 11px 7px;
+}
+
+#tsaNav .deals>a {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) right -800px no-repeat;
+  padding: 10px 22px 10px 8px;
+}
+
+#tsaNav li .sub-nav-container {
+  width: 778px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 39px;
+  left: 0px;
+  height: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .05s ease-in .25s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tsaNav li:hover .sub-nav-container {
+  height: auto;
+  max-height: 500px;
+  border: solid 1px #e7e7e7;
+  border-top: none;
+  display: block;
+  box-shadow: #000;
+}
+
+#tsaNav li .sub-nav-container ul.sub-nav-right {
+  float: right;
+  border: none;
+  margin: 10px 0px;
+}
+
+#tsaNav li .sub-nav-container ul {
+  margin: 10px;
+  float: left;
+  width: 175px;
+  white-space: normal;
+  border-right: solid 1px #eeeeee;
+}
+
+#tsaNav li .sub-nav-container ul:nth-child(5) {
+  clear: left;
+}
+
+#tsaNav li .sub-nav-container ul li {
+  color: #333333;
+  display: block;
+  white-space: normal;
+}
+
+#tsaNav li ul li a {
+  color: #333333;
+  text-align: left;
+  padding: 2px;
+  font-size: 0.750em;
+}
+
+#tsaNav li.sub-nav-header a {
+  color: #ED3025;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#tsaNav .sub-nav-more {
+  font-weight: bold;
+}
+
+#tsaNav .sub-nav-more a::after {
+  content: "\0000a0\00BB";
+  white-space: pre-wrap;
+}
+
+#tsaNav .sub-nav-monetate {
+  float: left;
+  margin: 0px auto;
+  width: 185px;
+}
+/******************************************************************
+
+HEADER | MOBILE SPECIFIC
+
+*******************************************************************/
+
+#tsaLogo {
+  float: left;
+  height: 60px;
+}
+
+#tsaMobileNav {
+  width: 100%;
+  display: inline-block;
+}
+
+#tsaMobileMenu {
+  width: 50px;
+  height: 45px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 8px -1697px no-repeat;
+  /*  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 12px -1592px no-repeat; A/B Test */
+  
+  float: left;
+  cursor: pointer;
+}
+
+#tsaMobileNav img {
+  float: left;
+  height: 38px;
+  width: auto;
+}
+
+#tsaMobileNav ul {
+  float: left;
+  width: 87%;
+}
+
+#tsaMobileNav li {
+  width: 25%;
+  vertical-align: middle;
+}
+
+#tsaMobileNav li a {
+  color: #ffffff;
+  display: block;
+  padding: 0px 10px 0px 0px;
+  line-height: 44px;
+}
+
+#tsaMobileNav .mobile-deals a {
+  padding-left: 24px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 3px -898px no-repeat;
+  /*  background:url(http://www.sportsauthority.com/graphics/media/tsa/SA/images/icon-deals-white.png) no-repeat left center;*/
+}
+
+#tsaMobileNav .mobile-stores a {
+  padding-left: 24px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 9px -697px no-repeat;
+}
+
+#tsaMobileNav .mobile-cart a {
+  padding-left: 27px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 0px -298px no-repeat;
+}
+
+#tsaHeader #tsaLogoMobile a {
+  height: 33px;
+}
+
+#tsaHeader .menu-open {
+  left: 0px;
+  height: auto;
+}
+
+#tsaCloseMobile {
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  background: none;
+  background-color: rgba(0, 0, 0, .7);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#tsaCloseMobile.menu-open {
+  min-height: 680px;
+  height: 100%;
+  display: block;
+}
+/******************************************************************
+
+HEADER | TABLET SPECIFIC
+
+*******************************************************************/
+
+#tsaNav li .sub-nav-container-alt {
+  background-color: #ffffff;
+  position: absolute;
+  top: 39px;
+  left: -40px;
+  height: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: max-height ease-in .25s;
+}
+
+#tsaNav li .menu-open {
+  /*:hover .sub-nav-container-alt, #tsaNav li:active .sub-nav-container-alt*/
+  
+  height: auto;
+  max-height: 500px;
+  border: solid 1px #888888;
+  border-top: none;
+  display: block;
+}
+
+#tsaNav li .sub-nav-container-alt ul {
+  float: left;
+  white-space: normal;
+}
+
+#tsaNav li .sub-nav-container-alt ul li {
+  width: 100%;
+}
+
+#tsaNav li .sub-nav-container-alt ul li:hover {
+  background-color: #f7f7f7;
+}
+
+#tsaNav li .sub-nav-container-alt ul li a {
+  font-size: 1em;
+  text-align: center;
+  padding: 12px 25px;
+}
+/******************************************************************
+
+HEADER | GLOBAL PROMO ZONE
+
+*******************************************************************/
+
+#tsaGlobalPromo {
+  float: left;
+  width: 100%;
+  min-height: 50px;
+  color: #999;
+  text-align: center;
+  background: #DDD;
+  opacity: 0.5;
+  margin-top: 1px;
+}
+
+#tsaGlobalPromo img {
+  margin: 0px auto;
+}
+
+#tsaHeader #tsaLogoMobile {
+  padding-right: 25px;
+}
+
+#tsaHeader #tsaLogoMobile a {
+  display: block;
+  width: 100px;
+  height: 45px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_Logos@1x.png) 0px 3px no-repeat;
+  background-size: 110px;
+}
+/*
+#tsaHeader *{
+  transition:ease-out .25s all; 
+}*/
+/******************************************************************
+
+HEADER | 2X IMAGES | ALL SCREENS THAT SUPPORT THEM
+
+******************************************************************/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  #tsaStoreLocator, #tsaHeaderTextPromo a, #tsaMobileMenu, #tsaMobileNav .mobile-deals a, #tsaMobileNav .mobile-stores a, #tsaMobileNav .mobile-cart a, #tsaMyAccount, #tsaHeader #tsaStoreLocator, #tsaStoreLocator::after, #tsaCart, #tsaNav>li, nav>li, #tsaNav .deals>a, #tsaSearch input[type=submit] {
+    /*background-image: url(tsaSprite_IconsB@2x.png);*/
+    background-size: 32px;
+  }
+  #tsaHeader #tsaLogo a {
+    /*background-image: url(tsaSprite_Logos@2x.png);*/
+    background-size: 150px;
+  }
+  #tsaSearch input[type=submit] {
+    background-image: none;
+  }
+  #tsaHeader #tsaLogoMobile a {
+    /*background-image: url(tsaSprite_Logos@2x.png);*/
+    background-size: 110px;
+  }
+}
+/******************************************************************
+
+HEADER | SMALL PHONE | 300px - 413px Device Width
+
+*******************************************************************/
+
+@media only screen and (min-width: 0em) and (max-width: 25.75em) {
+  /*(was 25.875em)*/
+  
+  #Header {
+    background-color: #555555;
+    border-bottom: none;
+    height: 110px;
+  }
+  #tsaHeader {
+    width: 100%;
+    padding: 0px;
+  }
+  #tsaHeader .hide-300 {
+    display: none;
+  }
+  #tsaHeader .show-300 {
+    display: inline-block;
+  }
+  #tsaHeaderRow1,
+  #tsaHeaderRow2 {
+    padding: 0px;
+    margin-left: 5px;
+  }
+  #tsaHeaderRow3 {
+    padding: 0px;
+    position: absolute;
+    left: -610px;
+    top: 52px;
+    transition: left .25s ease-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .15);
+    width: 60%;
+    min-width: 180px;
+    height: 0px
+  }
+  #tsaMobileNav ul {
+    width: 80%;
+    min-width: 240px;
+  }
+  li #tsaLogoMobile a {
+    padding-right: 25px;
+  }
+  #tsaMobileNav li {
+    width: 31%;
+  }
+  #tsaNav li {
+    display: block;
+    background: #f7f7f7;
+    line-height: 30px;
+    font-size: 1.2em;
+    text-align: left;
+    padding-left: 15px;
+  }
+  #tsaNav li:hover,
+  #tsaNav li:active {
+    background-image: none;
+    background-color: #ffffff;
+  }
+  #tsaNav li:hover .sub-nav-container {
+    display: none;
+  }
+  #tsaNav li::after {
+    content: "";
+    border-bottom: 1px solid #eaeaea;
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+    padding: 0px;
+  }
+  #tsaNav li a {
+    color: #555555;
+  }
+  #tsaNav .deals a {
+    background-image: none;
+  }
+  #tsaSearch {
+    background: none;
+  }
+  #tsaSearch input[type=submit] {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 14px 1px no-repeat #666666;
+    width: 50px;
+    font-size: 0em;
+    line-height: 0px;
+  }
+  #tsaSearch {
+    width: 95.5%;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid #444;
+    border-right-color: #777;
+    border-bottom-color: #777;
+  }
+  #tsaGlobalPromo {
+    margin-top: 6px;
+  }
+}
+/******************************************************************
+
+HEADER | WIDE PHONE | 414px - 599px Device Width
+
+******************************************************************/
+
+@media only screen and (min-width: 25.75em) and (max-width: 37.4375em) {
+  /*(was 25.875em)*/
+  
+  #tsaGlobalPromo {
+    margin-top: 6px;
+  }
+  #Header {
+    background-color: #555555;
+    border-bottom: none;
+    height: 110px;
+  }
+  #tsaHeader {
+    width: 100%;
+    padding: 0px;
+  }
+  #tsaHeader .hide-414 {
+    display: none;
+  }
+  #tsaHeader .show-414 {
+    display: inline-block;
+  }
+  #tsaHeaderRow1,
+  #tsaHeaderRow2 {
+    padding: 0px;
+    margin-left: 5px;
+  }
+  #tsaHeaderRow3 {
+    padding: 0px;
+    position: absolute;
+    left: -300px;
+    top: 52px;
+    transition: left .25s ease-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .15);
+    width: 50%;
+    height: 0px;
+  }
+  #tsaNav li {
+    display: block;
+    background: #f7f7f7;
+    line-height: 40px;
+    font-size: 1.2em;
+    text-align: left;
+    padding-left: 15px;
+  }
+  #tsaNav li:hover,
+  #tsaNav li:active {
+    background-image: none;
+    background-color: #ffffff;
+  }
+  #tsaNav li:hover .sub-nav-container {
+    display: none;
+  }
+  #tsaNav li::after {
+    content: "";
+    border-bottom: 1px solid #eaeaea;
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+    padding: 0px;
+  }
+  #tsaNav li a {
+    color: #555555;
+  }
+  #tsaNav .deals a {
+    background-image: none;
+  }
+  #tsaSearch {
+    background: none;
+  }
+  #tsaSearch input[type=submit] {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 14px 1px no-repeat #666666;
+    width: 50px;
+    font-size: 0em;
+    line-height: 0px;
+    text-indent: 200px;
+  }
+  #tsaSearch {
+    width: 95.5%;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid #444;
+    border-right-color: #777;
+    border-bottom-color: #777;
+  }
+  #tsaMobileNav li {
+    width: 23%;
+  }
+}
+/******************************************************************
+
+HEADER | SMALL TABLET | 600px - 767px Device Width
+
+******************************************************************/
+
+@media screen and (min-width: 37.5em) and (max-width: 47.9375em) {
+  #tsaHeader {
+    width: 570px;
+  }
+  #tsaHeader .hide-600 {
+    display: none;
+  }
+  #tsaHeader .show-600 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  #tsaTopMenu1 {
+    float: left;
+  }
+  #tsaTopMenu2 {
+    float: right;
+  }
+  #tsaHeader .bold-text {
+    text-shadow: none;
+  }
+  #tsaSearch {
+    width: 51%;
+  }
+  #tsaNav li:hover .sub-nav-container {
+    display: none;
+  }
+  #tsaNav li a {
+    padding: 10px 6px;
+  }
+  #sli_search_1 {
+    font-size: 0.95em;
+  }
+  #tsaGlobalPromo {
+    margin-top: 2px;
+  }
+  #tsaSearch input[type=submit] {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 14px 1px no-repeat #666666;
+    width: 50px;
+    font-size: 0em;
+    text-indent: 200px;
+    line-height: 0px;
+  }
+}
+/******************************************************************
+
+HEADER | LARGE TABLET | 768px - 959px Device Width
+
+******************************************************************/
+
+@media screen and (min-width: 48em) and (max-width: 59.9375em) {
+  /*768px-959px*/
+  
+  #tsaHeader {
+    width: 738px;
+  }
+  #tsaHeader .hide-768 {
+    display: none;
+  }
+  #tsaHeader .show-768 {
+    display: inline-block;
+  }
+  #tsaTopMenu1 {
+    float: left;
+  }
+  #tsaTopMenu2 {
+    float: right;
+  }
+  #tsaSearch {
+    width: 42%;
+  }
+  #tsaNav li:hover .sub-nav-container {
+    display: none;
+  }
+  #tsaNav li a {
+    padding: 10px 10px;
+  }
+  #tsaGlobalPromo {
+    margin-top: 2px;
+  }
+  #tsaSearch input[type=submit] {
+   /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-128/tsaSprite_IconsB@1x.png) 14px 1px no-repeat #666666;*/
+    width: 50px;
+    font-size: 0em;
+    text-indent: 200px;
+  }
+}
+/******************************************************************
+
+HEADER | LARGE DESKTOP | 1200px+ Device Width
+
+******************************************************************/
+
+@media screen and (min-width: 76.25em) {
+  #Header {
+    height: 118px;
+    border-bottom: 41px solid #555555;
+  }
+  #tsaHeader {
+    width: 1190px;
+  }
+  #tsaHeaderRow1,
+  #tsaHeaderRow2,
+  #tsaHeaderRow3 {
+    padding: 6px 0px 0px 0px;
+  }
+  #tsaHeaderTextPromo {
+    font-size: 1em;
+  }
+  #tsaTopMenu1 li a,
+  #tsaTopMenu2 li a {
+    font-size: 1em;
+    padding: 10px 17px;
+  }
+  #tsaSearch {
+    width: 64%;
+  }
+  #tsaSearch input[type=submit] {
+    background-image: none;
+  }
+  #tsaNav li a {
+    padding: 10px 15px;
+    font-size: 1.125em;
+  }
+  #tsaNav li .sub-nav-container {
+    top: 42px;
+  }
+  #tsaGlobalPromo {
+    margin-top: 0px;
+  }
+  #tsaHeaderTextPromo a {
+    background-position: right -393px;
+  }
+  #tsaNav>li:hover,
+  nav>li:hover {
+    background-position: center -1778px;
+  }
+}
+.cards{
+  border: solid red;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+.modal{
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2),0 6px 20px 0 rgba(0, 0, 0, .19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@-webkit-keyframes animatetop{
+  from{top:-300px;opacity: 0;}
+  to{top: 0;opacity: 1;}
+}
+@keyframes animatetop {
+  from{top: -300px;opacity: 0;}
+  to{top: 0;opacity: 1;}
+}
+.close{
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,.close:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header{
+  padding: 2px 16px;
+  background-color: #451b04;
+  color: white;
+}
+.modal-body{
+  padding: 20px 16px;
+}
+.modal-footer{
+  padding: 2px 16px;
+  background-color: #451b04;
+  color: white;
+}
+.display-block{
+  display: block;
+}
+.display-none{
+  display: none;
+}
+.error{
+  color: red;
+}
+.success{
+  color: green;
+}
+.center{
+  text-align: center;
+  width: 100%;
+}
+.result{
+  font-size: 40px;
+}
+.intro{
+  
+  background-image: url('https://images.unsplash.com/photo-1621886292650-520f76c747d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=1080');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+
+}
+
+/*
+*bids product section
+*/
+.l-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  padding: 1.6rem 1.6rem 3.2rem;
+}
+
+.l-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 1.6rem;
+  grid-row-gap: 1.6rem;
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  .l-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.c-header {
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+.c-header:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 0.2rem;
+  background: var(--primary-trans);
+}
+
+.c-card {
+  border-radius: 0.8rem;
+  background: var(--surface);
+  width: 100%;
+  margin-bottom: 1.6rem;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.12);
+}
+.c-card__body, .c-card__header {
+  padding: 2.4rem;
+}
+@media screen and (max-width: 700px) {
+  .c-card__body, .c-card__header {
+    padding: 1.2rem;
+  }
+}
+.c-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 700px) {
+  .c-card__header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .c-place {
+    transform: translateY(4px);
+  }
+}
+
+.c-logo {
+  display: inline-block;
+  width: 100%;
+  max-width: 17.6rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.c-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.c-list__item {
+  padding: 1.6rem 0;
+}
+.c-list__item .c-flag {
+  margin-top: 0.8rem;
+}
+@media screen and (max-width: 700px) {
+  .c-list__item .c-flag {
+    margin-top: 0.4rem;
+  }
+}
+.c-list__grid {
+  display: grid;
+  grid-template-columns: 4.8rem 3fr 1fr;
+  grid-column-gap: 2.4rem;
+}
+@media screen and (max-width: 700px) {
+  .c-list__grid {
+    grid-template-columns: 3.2rem 3fr 1fr;
+    grid-column-gap: 0.8rem;
+  }
+}
+
+.c-media {
+  display: inline-flex;
+  align-items: center;
+}
+.c-media__content {
+  padding-left: 1.6rem;
+}
+@media screen and (max-width: 700px) {
+  .c-media__content {
+    padding-left: 0.8rem;
+  }
+}
+.c-media__title {
+  margin-bottom: 0.4rem;
+}
+@media screen and (max-width: 700px) {
+  .c-media__title {
+    font-size: 1.4rem;
+  }
+}
+
+.c-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  box-shadow: inset 0px 0px 0px 1px currentColor;
+  border-radius: 50%;
+  background: var(--lightest);
+  color: var(--dark);
+}
+@media screen and (max-width: 700px) {
+  .c-avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+.c-avatar--lg {
+  width: 9.6rem;
+  height: 9.6rem;
+}
+
+.c-button {
+  display: inline-block;
+  background: var(--dark);
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 1.2rem 2rem;
+  transition: all 120ms ease-out 0s;
+}
+.c-button--block {
+  display: block;
+  width: 100%;
+}
+.c-button:hover, .c-button:focus {
+  filter: brightness(0.9);
+}
+.c-button:focus {
+  box-shadow: 0px 0px 0px 0.4rem var(--primary-trans);
+}
+.c-button:active {
+  box-shadow: 0px 0px 0px 0.4rem var(--primary-trans), inset 0px 0px 0.8rem rgba(0, 0, 0, 0.2);
+  filter: brightness(0.8);
+}
+
+.c-select {
+  background: transparent;
+  padding: 1.2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 1.4rem;
+  border-color: rgba(255, 255, 255, 0.2);
+  transition: all 120ms ease-out 0s;
+}
+.c-select:hover {
+  background: var(--darkest);
+}
+
+.c-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: var(--lightest);
+  color: var(--dark);
+  border-radius: 0.4rem;
+}
+@media screen and (max-width: 700px) {
+  .c-flag {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.c-button--light {
+  background: var(--lightest);
+}
+
+.c-button--primary {
+  background: var(--primary);
+}
+
+.c-button--dark {
+  background: var(--darkest);
+}
+
+.c-button--transparent {
+  background: transparent;
+}
+
+.c-button--medium {
+  background: var(--medium);
+}
+
+.c-button--yellow {
+  background: var(--yellow);
+}
+
+.c-button--orange {
+  background: var(--orange);
+}
+
+.c-button--teal {
+  background: var(--teal);
+}
+
+.c-button--light-gradient {
+  background: linear-gradient(to top, var(--light), var(--lightest));
+}
+
+.u-text--title {
+  font-family: "Oswald", system-ui;
+}
+
+.u-text--left {
+  text-align: left;
+}
+.u-text--center {
+  text-align: center;
+}
+.u-text--right {
+  text-align: right;
+}
+
+.u-bg--light {
+  background: var(--lightest) !important;
+}
+
+.u-text--light {
+  color: var(--lightest) !important;
+}
+
+.u-bg--primary {
+  background: var(--primary) !important;
+}
+
+.u-text--primary {
+  color: var(--primary) !important;
+}
+
+.u-bg--dark {
+  background: var(--darkest) !important;
+}
+
+.u-text--dark {
+  color: var(--darkest) !important;
+}
+
+.u-bg--transparent {
+  background: transparent !important;
+}
+
+.u-text--transparent {
+  color: transparent !important;
+}
+
+.u-bg--medium {
+  background: var(--medium) !important;
+}
+
+.u-text--medium {
+  color: var(--medium) !important;
+}
+
+.u-bg--yellow {
+  background: var(--yellow) !important;
+}
+
+.u-text--yellow {
+  color: var(--yellow) !important;
+}
+
+.u-bg--orange {
+  background: var(--orange) !important;
+}
+
+.u-text--orange {
+  color: var(--orange) !important;
+}
+
+.u-bg--teal {
+  background: var(--teal) !important;
+}
+
+.u-text--teal {
+  color: var(--teal) !important;
+}
+
+.u-bg--light-gradient {
+  background: linear-gradient(to top, var(--light), var(--lightest)) !important;
+}
+
+.u-text--light-gradient {
+  color: linear-gradient(to top, var(--light), var(--lightest)) !important;
+}
+
+.u-display--flex {
+  display: flex;
+}
+
+.u-align--center {
+  align-items: center;
+}
+
+.u-justify--center {
+  justify-content: center;
+}
+
+.u-align--flex-end {
+  align-items: flex-end;
+}
+
+.u-justify--flex-end {
+  justify-content: flex-end;
+}
+
+.u-align--flex-start {
+  align-items: flex-start;
+}
+
+.u-justify--flex-start {
+  justify-content: flex-start;
+}
+
+.u-align--space-between {
+  align-items: space-between;
+}
+
+.u-justify--space-between {
+  justify-content: space-between;
+}
+
+.u-text--small {
+  font-size: 1.4rem;
+}
+
+.u-pl--2 {
+  padding-left: 0.2rem;
+}
+
+.u-ml--2 {
+  margin-left: 0.2rem;
+}
+
+.u-pr--2 {
+  padding-right: 0.2rem;
+}
+
+.u-mr--2 {
+  margin-right: 0.2rem;
+}
+
+.u-pb--2 {
+  padding-bottom: 0.2rem;
+}
+
+.u-mb--2 {
+  margin-bottom: 0.2rem;
+}
+
+.u-pt--2 {
+  padding-top: 0.2rem;
+}
+
+.u-mt--2 {
+  margin-top: 0.2rem;
+}
+
+.u-pl--4 {
+  padding-left: 0.4rem;
+}
+
+.u-ml--4 {
+  margin-left: 0.4rem;
+}
+
+.u-pr--4 {
+  padding-right: 0.4rem;
+}
+
+.u-mr--4 {
+  margin-right: 0.4rem;
+}
+
+.u-pb--4 {
+  padding-bottom: 0.4rem;
+}
+
+.u-mb--4 {
+  margin-bottom: 0.4rem;
+}
+
+.u-pt--4 {
+  padding-top: 0.4rem;
+}
+
+.u-mt--4 {
+  margin-top: 0.4rem;
+}
+
+.u-pl--8 {
+  padding-left: 0.8rem;
+}
+
+.u-ml--8 {
+  margin-left: 0.8rem;
+}
+
+.u-pr--8 {
+  padding-right: 0.8rem;
+}
+
+.u-mr--8 {
+  margin-right: 0.8rem;
+}
+
+.u-pb--8 {
+  padding-bottom: 0.8rem;
+}
+
+.u-mb--8 {
+  margin-bottom: 0.8rem;
+}
+
+.u-pt--8 {
+  padding-top: 0.8rem;
+}
+
+.u-mt--8 {
+  margin-top: 0.8rem;
+}
+
+.u-pl--16 {
+  padding-left: 1.6rem;
+}
+
+.u-ml--16 {
+  margin-left: 1.6rem;
+}
+
+.u-pr--16 {
+  padding-right: 1.6rem;
+}
+
+.u-mr--16 {
+  margin-right: 1.6rem;
+}
+
+.u-pb--16 {
+  padding-bottom: 1.6rem;
+}
+
+.u-mb--16 {
+  margin-bottom: 1.6rem;
+}
+
+.u-pt--16 {
+  padding-top: 1.6rem;
+}
+
+.u-mt--16 {
+  margin-top: 1.6rem;
+}
+
+.u-pl--24 {
+  padding-left: 2.4rem;
+}
+
+.u-ml--24 {
+  margin-left: 2.4rem;
+}
+
+.u-pr--24 {
+  padding-right: 2.4rem;
+}
+
+.u-mr--24 {
+  margin-right: 2.4rem;
+}
+
+.u-pb--24 {
+  padding-bottom: 2.4rem;
+}
+
+.u-mb--24 {
+  margin-bottom: 2.4rem;
+}
+
+.u-pt--24 {
+  padding-top: 2.4rem;
+}
+
+.u-mt--24 {
+  margin-top: 2.4rem;
+}
+
+.u-pl--32 {
+  padding-left: 3.2rem;
+}
+
+.u-ml--32 {
+  margin-left: 3.2rem;
+}
+
+.u-pr--32 {
+  padding-right: 3.2rem;
+}
+
+.u-mr--32 {
+  margin-right: 3.2rem;
+}
+
+.u-pb--32 {
+  padding-bottom: 3.2rem;
+}
+
+.u-mb--32 {
+  margin-bottom: 3.2rem;
+}
+
+.u-pt--32 {
+  padding-top: 3.2rem;
+}
+
+.u-mt--32 {
+  margin-top: 3.2rem;
+}

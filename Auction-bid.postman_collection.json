@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "e83407d1-963a-41a9-bc06-7547ad31f096",
+		"name": "Auction-bid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users-requests",
+			"item": [
+				{
+					"name": "login-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"cyrille\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login-user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/get-all-users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"get-all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-new-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"username\": \"paulss\",\r\n        \"email\": \"mangosd\",\r\n        \"password\": \"16145411\",\r\n        \"datejoined\": \"2021-12-03T15:01:36.251+00:00\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/register-new",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"register-new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-user-to-event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/register-user/12/to-event/1452",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"register-user",
+								"12",
+								"to-event",
+								"1452"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find-user-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/find-by-id/101",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"find-by-id",
+								"101"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bids-request",
+			"item": [
+				{
+					"name": "get-all-bids",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/get-all-bids",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"get-all-bids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find-bid-by-id/4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/find-bid-by-id/19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"find-bid-by-id",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "place-new-bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"bid_price\": 1450,\r\n        \"time_placed\": \"2021-12-03T15:39:10.665+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/add-new-bid/101/product/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"add-new-bid",
+								"101",
+								"product",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bid-by-user/101",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/bid-by-user/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"bid-by-user",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bid-by-user and product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/bid-by-user/101/product/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"bid-by-user",
+								"101",
+								"product",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-bid-by-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/bid-by-product/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"bid-by-product",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-winning-bid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products-requests",
+			"item": [
+				{
+					"name": "add-new-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"pname\": \"pinaaple\",\r\n        \"minimum_price\": 1250,\r\n        \"dateSaved\": \"2021-12-03T14:24:44.837+00:00\",\r\n        \"imageUrl\": \"example\",\r\n        \"expiry\": \"2024-12-03T14:24:44.837+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/add-new-product/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"add-new-product",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find-product-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/find-one-product/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"find-one-product",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find-product-by-user-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/product-by-user/101",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"product-by-user",
+								"101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/delete-product-by-id/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"delete-product-by-id",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/all-products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"all-products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bundle-requests",
+			"item": [
+				{
+					"name": "get-all-bundles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/get-all-bundles",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"get-all-bundles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-bundleby_id/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/get-bundle-by-id/62",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"get-bundle-by-id",
+								"62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-new-bundle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"bundleCreation\": \"2021-12-06\",\r\n        \"bundleExpiry\": \"2021-12-06\",\r\n        \"image_url\": \"https://www.image.com\",\r\n        \"bundlePrice\": 1450.0\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/create-bundle/62",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"create-bundle",
+								"62"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "event-requests",
+			"item": [
+				{
+					"name": "find-all-events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/get-all-events",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"get-all-events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-event-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/get-event-by-id/62",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"get-event-by-id",
+								"62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-event-by-id/{event_id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/delete-event-by-id/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"delete-event-by-id",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-new-event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\":\"Saturday Event\",\r\n    \"eventStartingTime\":\"2021-12-03T15:01:36.251+00:00\",\r\n    \"eventEndDate\":\"2022-12-03T15:01:36.251+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/create-new-event",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"create-new-event"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
