@@ -12,7 +12,7 @@ class BidsProduct extends Component{
         
         if(user==null){
             console.log("is null")
-            window.location.href="/login"
+            window.location.href="index.html#/login"
         }
     }
     componentDidMount(){

@@ -22,13 +22,13 @@ class  Nav extends Component{
    logouthandle=(e)=>{
       e.preventDefault()
       window.localStorage.removeItem('email')
-      window.location.href='/login'
+      window.location.href='index.html#/login'
    }
    handleSearchButton=(e)=>{
       e.preventDefault()
       console.log(this.state.search)
       sessionStorage.setItem("searchName",this.state.search)
-      window.location.href="/search"
+      window.location.href="index.html#/search"
    }
    render(){
    let signedId=window.localStorage.getItem("email");
