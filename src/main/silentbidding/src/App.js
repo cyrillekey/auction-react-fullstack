@@ -6,7 +6,7 @@ import './App.css';
 import Layout from './components/Layout/Layout';
 import { Component } from 'react';
 import Login from './containers/Login'
-import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import { HashRouter as Router,Route,Routes } from 'react-router-dom';
 import Signup from './containers/Signup';
 import Homepage from './components/homepage/Homepage';
 import UploadForm from './containers/UploadForm'
