@@ -16,7 +16,7 @@ class UploadForm extends Component{
         }
         if(localStorage.getItem("email")==null){
           console.log("is null")
-          window.location.href="/login"
+          window.location.href="index.html#/login"
       }
     }
     handleChange=(e)=>{
