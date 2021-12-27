@@ -4,7 +4,7 @@ import './App.css';
 //import Footer from './components/Footer';
 
 import Layout from './components/Layout/Layout';
-import { Component } from 'react/cjs/react.development';
+import { Component } from 'react';
 import Login from './containers/Login'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import Signup from './containers/Signup';
