@@ -19,7 +19,7 @@ class Dashboard extends Component{
     componentDidMount(){
       axios({
          method:'GET',
-         url:'https://silentbidding.herokuapp.com/product-by-user/'+localStorage.getItem("email"),
+         url:'https://silentbiddingapp.herokuapp.com/product-by-user/'+localStorage.getItem("email"),
          headers:{
           "Content-Type":"application/json"
         }
@@ -28,7 +28,7 @@ class Dashboard extends Component{
       }).catch(response=>{
         alert("an error occured tyring to fetch products")
       })
-      axios.get('https://silentbidding.herokuapp.com/bid-by-user/'+localStorage.getItem('email')).then(response=>
+      axios.get('https://silentbiddingapp.herokuapp.com/bid-by-user/'+localStorage.getItem('email')).then(response=>
       {
         this.setState({bids:response.data})
       }).catch(response=>{

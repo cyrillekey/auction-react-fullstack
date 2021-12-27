@@ -18,7 +18,7 @@ class BidsProduct extends Component{
     componentDidMount(){
       axios({
         method:'GET',
-        url:'https://silentbidding.herokuapp.com/get-winning-bid-by-product/'+sessionStorage.getItem('prod'),
+        url:'https://silentbiddingapp.herokuapp.com/get-winning-bid-by-product/'+sessionStorage.getItem('prod'),
         headers:{
           "Content-Type":"application/json"
         }
@@ -27,14 +27,14 @@ class BidsProduct extends Component{
       }).catch(response=>{
         alert("an error occured")
       })
-      axios.get('https://silentbidding.herokuapp.com/find-one-product/'+sessionStorage.getItem('prod')).then(reponse=>{
+      axios.get('https://silentbiddingapp.herokuapp.com/find-one-product/'+sessionStorage.getItem('prod')).then(reponse=>{
         this.setState({product:reponse.data})
       }).catch(reponse=>{
         alert("an error occured getting product info")
       })
     }
     handleWin=(id)=>{
-      axios.get('https://silentbidding.herokuapp.com/set-winning-bid/product/'+sessionStorage.getItem('prod')+'bid/'+id).then(response=>{
+      axios.get('https://silentbiddingapp.herokuapp.com/set-winning-bid/product/'+sessionStorage.getItem('prod')+'bid/'+id).then(response=>{
         alert("bid won succesfully")
       }).catch(response=>{
         alert("an error occured while Updating product")

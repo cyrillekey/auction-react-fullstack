@@ -11,7 +11,7 @@ class AllProducts extends Component{
     }
     componentDidMount() {
         
-        axios.get("https://silentbidding.herokuapp.com/all-products")
+        axios.get("https://silentbiddingapp.herokuapp.com/all-products")
         .then(res=>{
             const items=res.data
             
