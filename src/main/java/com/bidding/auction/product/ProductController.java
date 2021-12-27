@@ -30,11 +30,7 @@ public class ProductController {
     private ProductRepository productRepository;
     @Autowired 
     private UserRepository userRepository;
-    @GetMapping(path="")
-    public ModelAndView home(){
-        ModelAndView mav=new ModelAndView("index");
-        return mav;
-    }
+    
 
     @GetMapping(path="/all-products")
     public List<Product> getAllProducts(){
