@@ -68,7 +68,7 @@ class Homepage extends Component {
          */
         axios({
             method: 'get',//request method type
-  url: 'http://127.0.0.1:8080/all-products',//url for request
+  url: 'https://silentbiddingapp.herokuapp.com/all-products',//url for request
   headers: { 
     'Authorization': 'Basic YWRtaW46YWRtaW4=', 
     /**
