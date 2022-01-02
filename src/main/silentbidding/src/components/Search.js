@@ -19,7 +19,7 @@ class Search extends Component{
     componentDidMount(){
         axios({
             method:'get',
-            url:'https://silentbiddingapp.herokuapp.com/find-product/'+sessionStorage.getItem("searchName"),
+            url:'http://localhost:8080/find-product/'+sessionStorage.getItem("searchName"),
             headers:{
             "Content-Type":"application/json"
             }

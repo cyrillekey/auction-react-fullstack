@@ -24,7 +24,7 @@ class PlaceBid extends Component{
             })
             axios({
                 method:'post',
-                url:"https://silentbiddingapp.herokuapp.com/add-new-bid/"+localStorage.getItem('email')+"/product/"+this.props.id,
+                url:"http://localhost:8080/add-new-bid/"+localStorage.getItem('email')+"/product/"+this.props.id,
                 data:formData,
                 headers:{
                     "Content-Type":"application/json"

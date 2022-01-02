@@ -1,9 +1,19 @@
+/**
+ * 
+ * class component that render component users use to list a produc for sale
+ */
+
 import axios from "axios";
 import React,{Component} from "react";
 import Auxi from '../hos/Auxi'
 import './Upload.css'
 class UploadForm extends Component{
-    constructor(props){
+  /**
+   * default constructor when component is rendered
+   * @param {*} props//passed from main component 
+   */  
+
+  constructor(props){
         super(props);
         this.state={
             productName:'',
@@ -19,6 +29,11 @@ class UploadForm extends Component{
           window.location.href="index.html#/login"
       }
     }
+    /**
+     * 
+     * @param {*} e
+     * method that handles the change of value in input box 
+     */
     handleChange=(e)=>{
         let name=e.target.name
         let value=e.target.value
@@ -40,11 +55,12 @@ class UploadForm extends Component{
                 "minimum_price": value,
                 "dateSaved": Date.now(),
                 "imageUrl": this.state.productUrl,
-                "expiry": this.state.productExpiry
+                "expiry": this.state.productExpiry,
+                "productDesc":this.state.productDesc
             });
             axios({
                 method:'post',
-                url:'https://silentbiddingapp.herokuapp.com/add-new-product/'+localStorage.getItem('email'),
+                url:'http://localhost:8080/add-new-product/'+localStorage.getItem('email'),
                 data:formData,
                 headers:{
                     "Content-Type":"application/json"

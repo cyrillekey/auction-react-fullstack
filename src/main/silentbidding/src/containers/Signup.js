@@ -1,3 +1,6 @@
+/**
+ * react component that renders the signup page
+ */
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './Login.css';
@@ -10,6 +13,9 @@ class Signup extends Component{
   constructor(props){
     super(props)
     this.state={
+      /**
+       * states used for input and form validation
+       */
       email:'',
       password:'',
       username:'',
@@ -24,41 +30,65 @@ class Signup extends Component{
     }
     
   }
+  /**
+   * 
+   * @param {e} e 
+   * method invoked when an input value is changed
+   */
   handleUserInput=(e)=>{
-    const name=e.target.name
-    const value=e.target.value
-    //const password=e.target.password
+    const name=e.target.name//get the input name
+    const value=e.target.value//get the input value
+    //validate input value and save value to stats
     this.setState({[name]:value},()=>{this.validateField(name,value)});
-  }
+  }/**
+   * 
+   * @param {*} fieldName 
+   * @param {*} value 
+   * method that validates the input value conforms to the set conditions
+   */
   validateField(fieldName,value){
-    let fieldValidationErrors=this.state.formErrors;
-    let emailValid=this.state.emailValid;
-    let passwordValid=this.state.passwordValid;
+    let fieldValidationErrors=this.state.formErrors;//if form has error
+    let emailValid=this.state.emailValid;//if email has error
+    let passwordValid=this.state.passwordValid;//if password has error
     switch (fieldName) {
       case 'email':
+        /**
+         * regex to confirm email is formed correctly
+         */
         emailValid=value.match(/^([\w.%+-])+@([\w-]+\.)+([\w]{2,})$/i);
         fieldValidationErrors.email=emailValid ? '':'is invalid';
         break;
       case 'password':
-        passwordValid=value.length >= 6;
+        passwordValid=value.length >= 6;//check if password length is equal or greater than 6
         fieldValidationErrors.password=passwordValid ? '':'is to short';  
         break;
       default:
         break;
     }
+    /**
+     * save errors that are discovered during form validation to the state
+     */
     this.setState({
       formErrors:fieldValidationErrors,
       emailValid:emailValid,
       passwordValid:passwordValid
     },this.validateForm);
-  }
+  }/**
+   * validate form is correct and set state as correct
+   */
   validateForm(){
     this.setState({formValid:this.state.emailValid && this.state.passwordValid});
   }
   handleSubmit=(e)=>{
+    /**
+     * function to handle user loging in
+     */
     e.preventDefault()
     this.setState({status:'signing up ...'})
     if(this.state.formValid){
+      /**
+       * create request body with data from form
+       */
       var bodyFormData=JSON.stringify({
         "username":this.state.username,
         "email":this.state.email,
@@ -66,12 +96,15 @@ class Signup extends Component{
       })
       axios({
         method:"post",
-        url:'https://silentbiddingapp.herokuapp.com/register-new',
+        url:'http://localhost:8080/register-new',//send post request to create user request
         data:bodyFormData,
         headers:{
           "Content-Type":"application/json"
         }
       }).then(function(response){
+        /**
+         * if request is executed correctly and user created user is redirected to hoome page
+         */
         if(response.status=="201"){
           window.location.href="/"
 
@@ -80,6 +113,9 @@ class Signup extends Component{
       })
     
       .catch(response=>{
+        /**
+         * if error occurs show modal box with error message
+         */
         if(response.response.status=="405"){
           this.setState({show:true,desc:"Username already taken try a different Username",status:'Signup'})
         }
@@ -90,6 +126,9 @@ class Signup extends Component{
     this.setState({show:false});
   }
   render(){  
+    /**
+     * render the form 
+     */
   return(
         <div>
          <div className="container">

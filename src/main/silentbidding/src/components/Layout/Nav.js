@@ -13,24 +13,43 @@ class  Nav extends Component{
       }
       
    }
+   /**
+    * 
+    * @param {e} e 
+    * responsible for performing search from the search bar
+    */
   
    handleSearch=(e)=>{
     
       this.setState({search:e.target.value})
       
-   }
+   }/**
+    * 
+    * @param {e} e
+    * logout the user 
+    */
    logouthandle=(e)=>{
       e.preventDefault()
-      window.localStorage.removeItem('email')
-      window.location.href='index.html#/login'
-   }
+      window.localStorage.removeItem('email')//unsets the user from localstorage
+      window.location.href='index.html#/login'//redirect to login page after logout
+   }/**
+    * 
+    * @param {*} e
+    * function to handle search 
+    */
    handleSearchButton=(e)=>{
       e.preventDefault()
-      console.log(this.state.search)
       sessionStorage.setItem("searchName",this.state.search)
-      window.location.href="index.html#/search"
+      if(window.location.pathname=="/search"){
+         window.location.reload()
+      }else{
+      window.location.href="#/search"
+      }
    }
    render(){
+      /**
+       * check if user is signed in 
+       */
    let signedId=window.localStorage.getItem("email");
    let signup=null;
    if(signedId){
@@ -73,19 +92,19 @@ class  Nav extends Component{
                <div id="tsaCloseMobile"></div>
             </div>
             <div id="tsaHeaderTextPromo" className="hide-768 hide-600 hide-414 hide-300">
-               <a href="/login">Sign up now to Start Bidding and Winning</a>
+               <Link to="/login">Sign up now to Start Bidding and Winning</Link>
             </div>
             <div id="tsaTopMenu1" className="hide-414 hide-300">
                <ul>
                   <li><Link to="/all-products">Products</Link></li>
                   <li><Link to="/upload">Sell a Product</Link></li>
-                  <li><a href="/">Events</a></li>
+                  
                </ul>
             </div>
             <div id="tsaTopMenu2" className="hide-414 hide-300">
                <ul>
                
-                  <li className="hide-600 hide-414 hide-300"><a id="tsaWeeklyAd" href="/all-products">Pick your product to see our <span>weekly</span> Mystery Bundle</a></li>
+                  <li className="hide-600 hide-414 hide-300"><Link id="tsaWeeklyAd" to="/all-products">Click here to see <span>weekly</span> Mystery Bundle</Link></li>
                </ul>
             </div>
          </div>
@@ -94,7 +113,7 @@ class  Nav extends Component{
                <Link to="/" className="noStyle">Silent Bidding</Link>
             </div>
             <div id="tsaSearch">
-               <form action="http://shop.sportsauthority.com/search" name="search" method="get" id="headerSearchForm" >
+               <form action="" name="search" method="get" id="headerSearchForm" >
                   <input type="search" autoComplete="off" placeholder="Search for shoes, clothing, interests, brands, etc." name="search" id="sli_search_1" value={this.state.search} onChange={this.handleSearch} />
                   <input type="submit" value="Search" id="search-button" onClick={this.handleSearchButton}/>
                </form>

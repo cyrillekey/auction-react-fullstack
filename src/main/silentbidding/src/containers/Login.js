@@ -1,3 +1,6 @@
+/**
+ * class component used to render the login page
+ */
 import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
@@ -5,6 +8,10 @@ import Modal from "../components/Modal";
 import { FormErrors } from "./FormErrors";
 import './Login.css';
 class Login extends Component{
+  /**
+   * default constructor that initializes the states used in the login page
+   * @param {*} props 
+   */
   constructor(props){
     super(props)
     this.state={
@@ -24,13 +31,20 @@ class Login extends Component{
     }
 
   }
-   
+   /**
+    * method similar to signup page that validates the user input during login process
+    * @param {*} fieldName 
+    * @param {*} value 
+    */
   validateField(fieldName,value){
     let fieldValidationErrors=this.state.formErrors;
     let emailValid=this.state.emailValid;
     let passwordValid=this.state.passwordValid;
     switch (fieldName) {
       case 'email':
+        /**
+         * regex to check if email entered by user is formed correctly
+         */
         emailValid=value.match(/^([\w.%+-])+@([\w-]+\.)+([\w]{2,})$/i);
         fieldValidationErrors.email=emailValid ? '':'is invalid';
         break;
@@ -41,28 +55,44 @@ class Login extends Component{
       default:
         break;
     }
+    /**
+     * 
+     * updates the state and sets any errors that my have occured
+     */
     this.setState({
       formErrors:fieldValidationErrors,
       emailValid:emailValid,
       passwordValid:passwordValid
     },this.validateForm);
-  }
+  }/**
+   * method that executes when the user preses the login button
+   * @param {*} e 
+   */
   handleLogin=(e)=>{
     e.preventDefault()
     this.setState({status:'Loging in ...'})
+    /**
+     * request body for the login request
+     */
     var bodyFormData=JSON.stringify({
       "email":this.state.email,
       "password":this.state.password
     })
+    /**
+     * get request to the login controller that checks if the user has registered to be able to login
+     */
     axios({
       method:"post",
-      url:"https://silentbiddingapp.herokuapp.com/login-user",
+      url:"http://localhost:8080/login-user",
       data:bodyFormData,
       headers:{
         "Content-Type":"application/json"
       }
     }).then(function(response){
-        
+        /**
+         * if password and email are correct response status will be 200 
+         * set localstorage with the user id and redirect to home page
+         */
       if(response.status=="200"){
         
         window.localStorage.setItem("email",response.data.userId)
@@ -72,7 +102,9 @@ class Login extends Component{
       if(response.response){
       console.log(response.response)
       if(response.response.status=="404"){
-        
+        /**
+         * if error is catched display a modal box with the resulting error message
+         */
       this.setState({show:true,desc:"User does not Exist",status:'Login'})
         
       }

@@ -1,7 +1,6 @@
 
 import './App.css';
 
-//import Footer from './components/Footer';
 
 import Layout from './components/Layout/Layout';
 import { Component } from 'react';
@@ -14,13 +13,19 @@ import AllProducts from './components/AllProducts';
 import Dashboard from './components/Dashboard';
 import Search from './components/Search';
 import BidsProduct from './components/BidsProduct'
-//eslint-disable-next-line
 class App extends Component {
   render (){
    return(
+     /**
+      * routes used in the project
+      */
      <Router>
        <Routes>
-       <Route path="/login" element={<Login/>}/>
+         {/**
+          * each route goes to a specific page defined by path
+          * element refers to the component that is rendered in the route
+          */}
+       <Route path="/login" element={<Login/>}/> 
        <Route path="/" element={<Layout children={<Homepage/>}/>}/>
        <Route path="/signup" element={<Signup/>}/>
        <Route path="/upload" element={<Layout children={<UploadForm/>}/>}/> 

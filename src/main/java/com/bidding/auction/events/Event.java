@@ -1,3 +1,6 @@
+/**
+ * class used for the shippping table and shipping bean
+ */
 package com.bidding.auction.events;
 
 import java.util.Date;
@@ -17,29 +20,38 @@ import com.bidding.auction.bundle.Bundle;
 import com.bidding.auction.user.User;
 
 
-@Entity
+@Entity//creates a shipping table
 public class Event {
-    @Id
-    @GeneratedValue
-    private Integer eventId;
-    private String eventName;
+    @Id//specifies it is the primary key
+    @GeneratedValue//value is automatically generated
+    private Integer eventId;//id of the event
+    private String eventName;//event name
     @Past
-    private Date eventStartingTime;
-    @Future
-    private Date eventEndDate;
+    private Date eventStartingTime;//time event starts
+    @Future//constraint to ensure end date is in the future
+    private Date eventEndDate;//time event ends
     @ManyToMany(mappedBy = "events")
-    private List<User> usersEvents;
-    @OneToOne(fetch = FetchType.LAZY,mappedBy = "oneEvent",cascade = CascadeType.REMOVE)
+    private List<User> usersEvents;//list of users belonging to the event
+    @OneToOne(fetch = FetchType.LAZY,mappedBy = "oneEvent",cascade = CascadeType.REMOVE)//one to one relationship with the bundle belonging to the event
     private Bundle eventBundle;
+    /**
+     * default constructor used by springboot
+     */
     protected Event(){
 
     }
+    //constructor that initializes the object when created
     public Event(Integer eventId,String eventName,Date eventStartingDate,Date eventEndDate){
         this.eventId=eventId;
         this.eventName=eventName;
         this.eventStartingTime=eventStartingDate;
         this.eventEndDate=eventEndDate;
     }
+    /**
+     * 
+     * getters and setters for the Event class
+     */
+
     public Bundle getEventBundle() {
         return eventBundle;
     }

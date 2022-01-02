@@ -31,6 +31,7 @@ public class Bid {
     private Product product;//product the bid has been placed on
     @OneToOne//relation ship between bid and the transaction place on it
     private Transaction bidTrans;
+    private String bidstatus;
     /**
      * contructor used by springbood
      */
@@ -45,17 +46,20 @@ public class Bid {
       * @param user user placing the bid
       * @param product product the bid is placed on
       */
-    public Bid(Integer bid_id,Integer bid_price,Date time_placed,User user,Product product){
+    public Bid(Integer bid_id,Integer bid_price,Date time_placed,User user,Product product,String bidstatus){
         this.bid_id=bid_id;
         this.bid_price=bid_price;
         this.time_placed=time_placed;
         this.user=user;
         this.product=product;
+        this.bidstatus=bidstatus;
+
     }
     /**
      * setters and getters for the bid class
      * @param user
      */
+    
     public void setUser(User user){
         this.user=user;
     }
@@ -86,6 +90,15 @@ public class Bid {
     public User getUser() {
         return user;
     }
+    public void setBidstatus(String bidstatus) {
+        this.bidstatus = bidstatus;
+    }
+    public String getBidstatus() {
+        return bidstatus;
+    }
+    /**
+     * to string method used by springboot
+     */
     @Override
     public String toString() {
         return String.format("[id:%s,bid-price:%s,time-palced:%s]", bid_id,bid_price,time_placed);

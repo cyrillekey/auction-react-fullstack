@@ -21,36 +21,51 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Range;
 
 
-@Entity
+@Entity//specifies it represents a table
 
 public class Product{
     
     private String pname;
-    @Id
-    @GeneratedValue
-    private Integer productid;  
+    @Id//specifies product id is the primary key
+    @GeneratedValue//specifies variable product id value is auto generated
+    private Integer productid;  //id of the product
     @Range(min=0,message="Price should be greater than zero")
-    private Integer minimum_price;
+    private Integer minimum_price;//minimum price for the product
     @Past(message = "Date should be in the past")
-    private Date dateSaved;
-    @JsonIgnore
+    private Date dateSaved;//date the product was added
+    @JsonIgnore//specifies user should not be returned in the response
     @ManyToOne(fetch = FetchType.LAZY)
-    private User userProduct;
-    private String imageUrl;
+    private User userProduct;//user who uploads the product
+    private String imageUrl;////url of the image of the product
     @Future(message = "Expiry date should be in the future")
-    private  Date expiry;
+    private  Date expiry;//date the product will expire 
     @JsonIgnore
-    @OneToMany(mappedBy = "product")
-    private List<Bid> bids;
-    @OneToOne(fetch = FetchType.LAZY)
-    private Bundle bundleProduct;
-    private Integer bidWinnerid;
+    @OneToMany(mappedBy = "product")//relationship that maps bid and product in a one to many relationship ie one product many bids one bid one product 
+    private List<Bid> bids;//list of all bids on the product
+    @OneToOne(fetch = FetchType.LAZY)//one to one relationship mapping with bundles
+    private Bundle bundleProduct;//bundle the product belongs to
+    private Integer bidWinnerid;//id of the user who has won the bid
     @OneToOne(fetch=FetchType.LAZY)
-    private Shipping productShipping; 
+    private Shipping productShipping; //shipping id for the product once won
+    private String productDesc;//description of the product
+    /**
+     * default constructor used by springboot
+     */
     Product(){
 
     }
-    public Product(String pname,Integer productid,Integer minimum_price,Date datesaved,User user,String imageUrl,Date expiry){
+    /**
+     * contructor called when method is created
+     * @param pname
+     * @param productid
+     * @param minimum_price
+     * @param datesaved
+     * @param user
+     * @param imageUrl
+     * @param expiry
+     * @param productDesc
+     */
+    public Product(String pname,Integer productid,Integer minimum_price,Date datesaved,User user,String imageUrl,Date expiry,String productDesc){
         this.pname=pname;
         this.productid=productid;
         this.dateSaved=datesaved;
@@ -58,7 +73,12 @@ public class Product{
         this.userProduct=user;
         this.imageUrl=imageUrl;
         this.expiry=expiry;
+        this.productDesc=productDesc;
     }
+    /**
+     * setters and getters used for the class Product
+     */
+
     public void setDateSaved(Date dateSaved) {
         this.dateSaved = dateSaved;
     }
@@ -110,6 +130,12 @@ public class Product{
     }
     public Integer getBidWinner() {
         return bidWinnerid;
+    }
+    public void setProductDesc(String productDesc) {
+        this.productDesc = productDesc;
+    }
+    public String getProductDesc() {
+        return productDesc;
     }   
     @Override
     public String toString() {

@@ -1,3 +1,6 @@
+/**
+ * class responsible for transaction bean and table
+ */
 package com.bidding.auction.Transaction;
 
 import java.util.Date;
@@ -13,23 +16,27 @@ import com.bidding.auction.bids.Bid;
 import com.bidding.auction.user.User;
 
 
-@Entity
+@Entity//creates a transaction table
 public class Transaction {
-    @Id
-    @GeneratedValue
-    private Integer transactionId;
-    private String referenceCode;
-    private Float amount;
-    private String responseCode;
-    private Date datePaid;
-    @OneToOne(mappedBy = "bidTrans")    
-    private Bid bid;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User userTrans;
+    @Id//specifies transactionid is the primary key
+    @GeneratedValue//value is auto generated
+    private Integer transactionId;//id of the transaction
+    private String referenceCode;//reference code of the transaction
+    private Float amount;//amount paid
+    private String responseCode;//for status of the transaction if complete or failed
+    private Date datePaid;//date the transaction was made
+    @OneToOne(mappedBy = "bidTrans")    //creates a one to one relationship with bid the transcation belongs to
+    private Bid bid;//bid the transaction belongs to
+    @ManyToOne(fetch = FetchType.LAZY)//creates a many to one relationship with the user paying for the transaction
+    private User userTrans;//user responsible for the transaction
 
+    //default contructor used springboot
     protected Transaction(){
 
     }
+    /**
+     * contructor that initializes the object when object is created
+     */
     public Transaction(Integer transactionId,String referenceCode,Float amount,String responseCode,Date datePaid,User userTrans,Bid bid){
         this.transactionId=transactionId;
         this.referenceCode=referenceCode;
@@ -39,6 +46,11 @@ public class Transaction {
         this.bid=bid;
         this.userTrans=userTrans;
     }
+    /**
+     * 
+     * setters and getters for the Transaction class
+     */
+
     public void setBid(Bid bid) {
         this.bid = bid;
     }

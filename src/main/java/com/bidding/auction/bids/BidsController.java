@@ -82,6 +82,7 @@ public class BidsController {
         }
         newbid.setUser(user.get());//set the user for the bid being placed
         newbid.setProduct(product.get());//set the product the bid belongs to
+        newbid.setBidstatus("bid pending");
         bidsRepository.save(newbid);//save the new bid
         URI location=ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newbid.getBid_id()).toUri();//get the url to the new bid created
         return ResponseEntity.created(location).build();//return the url to the new bid that has been created

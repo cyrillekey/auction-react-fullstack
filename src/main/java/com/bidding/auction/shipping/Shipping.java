@@ -1,3 +1,6 @@
+/**
+ * class responsible for shipping table and  bean
+ */
 package com.bidding.auction.shipping;
 
 import java.util.Date;
@@ -10,20 +13,30 @@ import javax.persistence.OneToOne;
 
 import com.bidding.auction.product.Product;
 
-@Entity
+@Entity//creates the shipping table
 public class Shipping {
-    @Id
-    @GeneratedValue
-    private Integer shippingId;
-    private String shippingLocation;
-    @OneToOne(fetch=FetchType.LAZY,mappedBy="productShipping")
-    private Product shippedProduct;
-    private Date shippingDate;
-    private Date estimatedArrivalDate;
-    private String pickupLocation;
+    @Id//specifies shipping id is the primary key
+    @GeneratedValue//shipping id is automatically generated
+    private Integer shippingId;//shipping id
+    private String shippingLocation;//location shipment is headed to
+    @OneToOne(fetch=FetchType.LAZY,mappedBy="productShipping")//one to one relationship with product being shipped
+    private Product shippedProduct;//product being shipped
+    private Date shippingDate;//date shipment was done
+    private Date estimatedArrivalDate;//estimated arrival date for shipment
+    private String pickupLocation;//location for shipping pickup
     Shipping(){
 
     }
+    /**
+     * constructor used when object is first
+     * @param shippingId
+     * @param shippingLocation
+     * @param shippedProduct
+     * @param shippingDate
+     * @param estimatedArrivalDate
+     * @param pickupLocation
+     */
+    /** */
     public Shipping(Integer shippingId,String shippingLocation,Product shippedProduct,Date shippingDate,Date estimatedArrivalDate,String pickupLocation)
     {
         this.shippingId=shippingId;
@@ -33,6 +46,12 @@ public class Shipping {
         this.estimatedArrivalDate=estimatedArrivalDate;
         this.pickupLocation=pickupLocation;
     }
+
+/**
+ * 
+ * Setters and getters used by the shipping class
+ */
+
     public Date getEstimatedArrivalDate() {
         return estimatedArrivalDate;
     }

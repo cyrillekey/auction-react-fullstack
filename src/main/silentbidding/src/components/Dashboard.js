@@ -7,19 +7,20 @@ class Dashboard extends Component{
         super(props)
         this.state={
             display:'hide',
+            bid:'hide',
             products:[],
             redirect:" ",
             bids:[]
         }
         if(localStorage.getItem("email")==null){
           console.log("is null")
-          window.location.href="index.html#/login"
+          window.location.href="#/login"
       }
     }
     componentDidMount(){
       axios({
          method:'GET',
-         url:'https://silentbiddingapp.herokuapp.com/product-by-user/'+localStorage.getItem("email"),
+         url:'http://localhost:8080/product-by-user/'+localStorage.getItem("email"),
          headers:{
           "Content-Type":"application/json"
         }
@@ -28,7 +29,7 @@ class Dashboard extends Component{
       }).catch(response=>{
         alert("an error occured tyring to fetch products")
       })
-      axios.get('https://silentbiddingapp.herokuapp.com/bid-by-user/'+localStorage.getItem('email')).then(response=>
+      axios.get('http://localhost:8080/bid-by-user/'+localStorage.getItem('email')).then(response=>
       {
         this.setState({bids:response.data})
       }).catch(response=>{
@@ -41,15 +42,18 @@ class Dashboard extends Component{
      this.setState({redirect:res})
      sessionStorage.setItem("prod",id)
    }
-   handleBid=()=>{
-    if(this.state.display=="hide"){
-      this.setState({display:''})
+   handleBid=(e)=>{
+     e.preventDefault()
+     console.log("was clicked")
+    if(this.state.bid=="hide"){
+      this.setState({bid:''})
   }else{
-      this.setState({display:'hide'})
+      this.setState({bid:'hide'})
 
   }
    }
     switchDisplay=(e)=>{
+      e.preventDefault()
         if(this.state.display=="hide"){
             this.setState({display:''})
         }else{
@@ -61,8 +65,8 @@ class Dashboard extends Component{
       
     
     render() {
-      var result=  this.state.products.length>=0?   <ul className={this.state.display} >{this.state.products.map(product=>(<li><a onClick={()=>this.handleClick(product.productid)}>{product.pname}</a></li>))}</ul>:  <ul className={this.state.display} ><li><a>No product Listed yet</a></li>   </ul>
-      var bidsReuslt=<ul className={this.state.display} >{this.state.bids.map(bid=>(<li><a >{bid.bid_price}</a></li>))}</ul>
+      var result=  this.state.products.length>0 ?   <ul className={this.state.display} >{this.state.products.map(product=>(<li><a onClick={()=>this.handleClick(product.productid)}>{product.pname}</a></li>))}</ul>:  <ul className={this.state.display} ><li><a>No product Listed yet</a></li>   </ul>
+      var bidsReuslt=this.state.bids.length>0? <ul className={this.state.bid} >{this.state.bids.map(bid=>(<li><a >{bid.bid_price} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>{bid.bidstatus}</span></a></li>))}</ul>:  <ul className={this.state.bid} ><li><a>No Bids Placed Yet </a></li>   </ul>
         return (
           
             <div className='center'>
@@ -70,11 +74,11 @@ class Dashboard extends Component{
   <ul>
     {this.state.redirect}
     <li>
-      <a href='#message'>
+      <a>
         <div class='fa fa-envelope'></div>
         <p onClick={this.handleBid}>Bids Placed <span class='badge right'>{this.state.bids.length}</span></p>
         
-        <ul className={this.state.display} >
+        <ul className={this.state.bid} >
         {
          bidsReuslt
         }
@@ -95,7 +99,7 @@ class Dashboard extends Component{
     </li>
     
     <li>
-      <a href='#message'>
+      <a>
         <div class='fa fa-sign-out'></div>
         Logout
       </a>

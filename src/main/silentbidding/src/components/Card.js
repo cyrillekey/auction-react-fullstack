@@ -36,6 +36,7 @@ class Card extends Component{
             <h4 className="title">
                 <a href="{% url 'mainpage:single' slug=product.product_slug %}">{this.props.name}</a>
             </h4>
+            <p>{this.props.desc}</p>
             <div className="price">
                 <span>Price: ${this.props.price}</span>
             </div>

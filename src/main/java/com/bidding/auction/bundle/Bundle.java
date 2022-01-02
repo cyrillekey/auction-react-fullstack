@@ -1,5 +1,7 @@
 package com.bidding.auction.bundle;
-
+/**
+ * Imports used in the program
+ */
 import java.sql.Date;
 import java.util.List;
 
@@ -19,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-@Entity
+@Entity//specifiesthe class represents a table
 /**
  * class that holds the bundle which is a collection of products that have not been sold on epiry date
  */
@@ -35,7 +37,7 @@ public class Bundle {
     @OneToMany(mappedBy = "bundleProduct")//list of products belonging to the bundle
     private List<Product> products;//list of prudtcs
     private Float bundlePrice;//price of the bundle
-    @JsonIgnore
+    @JsonIgnore//specifies field should not be returned in the request
     @OneToOne(fetch = FetchType.LAZY)
     private Event oneEvent;//events the bid belongs to
     /**
@@ -45,7 +47,7 @@ public class Bundle {
 
     }
     /**
-     * 
+     * initial contructor when Object is created
      * @param bundleId id of the bundle
      * @param bundleCreation date bundle is created
      * @param bundleExpiry bundle expiry date

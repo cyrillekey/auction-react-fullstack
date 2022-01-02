@@ -1,3 +1,7 @@
+/**
+ * spring boot file that initializes and runs the program.
+ * it is generated automatically by springboot
+ */
 package com.bidding.auction;
 
 import org.springframework.boot.SpringApplication;

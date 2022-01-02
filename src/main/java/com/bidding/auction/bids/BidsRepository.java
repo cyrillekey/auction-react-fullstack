@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 @Repository
 /**
@@ -19,4 +20,6 @@ public interface BidsRepository extends JpaRepository<Bid,Integer>{//class that 
      */
     @Query(value = "SELECT * from bid where product_productid=?1 ORDER BY bid_price DESC" ,nativeQuery = true)
     List<Bid> findWinningBid(Integer product_id);//method that selects bids from the bids table
+    @Query(value = "SELECT * FROM BID where bid_id <> :bid and product_productid=:prod",nativeQuery = true)
+    List<Bid> findLoosingBids(@Param("bid") Integer bidId,@Param("prod") Integer product);
 }

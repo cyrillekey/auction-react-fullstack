@@ -10,11 +10,15 @@ class AllProducts extends Component{
         }
     }
     componentDidMount() {
-        
-        axios.get("https://silentbiddingapp.herokuapp.com/all-products")
+        /**
+         * get request to get all products from the rest web service
+         */
+        axios.get("http://localhost:8080/all-products")
         .then(res=>{
             const items=res.data
-            
+            /**
+             * if request is successfull add response data to the response
+             */
             this.setState({items})
         })
         .catch(error=>{
@@ -27,7 +31,9 @@ class AllProducts extends Component{
              <Auxi>
                  <h1 className="center">All products</h1>
                  <div className="product-view" >
-                 {
+                 {/**
+                  * maps each product saved in the items state to the product component.
+                  */
            this.state.items.map(item=>(
                <Card key={item.productid} id={item.productid} name={item.pname} expiry={item.expiry} price={item.minimum_price} poster={item.imageUrl} showModal={()=>this.showModal(item.productid)}/>
            ))

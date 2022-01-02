@@ -1,6 +1,10 @@
+/**
+ * class component to render the footer
+ */
 import React, { Component } from "react";
 import Auxi from "../../hos/Auxi";
 import './Footer.css'
+import {Link} from 'react-router-dom';
 class Footer extends Component{
     render(){
         return(
@@ -9,19 +13,19 @@ class Footer extends Component{
   
   <div id="tsaPromoContainer" className="clearAll">
    <div id="footerSignup">
-     <a href="/signup"> <p><strong>Save 5%</strong> Sign Up to be the first to save!</p></a>
+     <Link to="/signup"> <p><strong>Save 5%</strong> Sign Up to be the first to save!</p></Link>
         
      <div>
           <a className="tsa-footer-cta" href="">Enter Email Address</a>
      </div>
   </div>
       <div id="footerGiftCard">
-         <a href="">Find Mystery Bundles<br/></a>
+         <Link to="/all-products">Find Mystery Bundles<br/></Link>
       </div>
       <div id="footerLeague">
          <div id="footerLeagueIMG"></div>
          <div id="leagueTitle">
-         <a href="/login">Join us <br/>Today for <strong>Free</strong></a>
+         <Link to="/login">Join us <br/>Today for <strong>Free</strong></Link>
          </div>
       </div>
    </div>
@@ -54,16 +58,16 @@ class Footer extends Component{
                <p className="tsa-footer-heading" >Quick Links</p>
                <ul>
                   <li>
-                     <a href="/login">Login</a>
+                     <Link to="/login">Login</Link>
                   </li>
                   <li>
-                     <a href="/signup">Signup</a>
+                     <Link to="/signup">Signup</Link>
                   </li>
                   <li>
-                     <a href="http://stores.sportsauthority.com/">Find a Store</a>
+                     <Link to="/all-products">Find products</Link>
                   </li>
                   <li>
-                     <a href="/account">My Account</a>
+                     <Link to="/account">My Account</Link>
                   </li>
                   
                </ul>
@@ -85,25 +89,25 @@ class Footer extends Component{
                   </p>
                </div>
                <div className="tsa-feedback-button mobileSwitch">
-                  <a href="http://www.sportsauthority.com/helpdesk/index.jsp?stillHaveQuestion=yes&amp;subdisplay=contact&amp;display=store">Contact Us<br/> Send Feedback</a>
+                  <a href="">Contact Us<br/> Send Feedback</a>
                </div>
                <div className="tsa-feedback-button largeSwitch">
-                  <a href="http://www.sportsauthority.com/helpdesk/index.jsp?stillHaveQuestion=yes&amp;subdisplay=contact&amp;display=store">Contact Us / Send Feedback</a>
+                  <a href="">Contact Us / Send Feedback</a>
                </div>
             </div>
          </div>
          <div id="tsaFooterSocial" className="clearAll">
             <ul>
                <li>
-                  <a href="https://instagram.com/sportsauthority/" target="_blank" id="tsaInstagram" className="tsa-social-icon">
+                  <a href="https://instagram.com/" target="_blank" id="tsaInstagram" className="tsa-social-icon">
                   </a>
                </li>
                <li>
-                  <a href="https://twitter.com/SportsAuthority" target="_blank" id="tsaTwitter" className="tsa-social-icon">
+                  <a href="https://twitter.com/" target="_blank" id="tsaTwitter" className="tsa-social-icon">
                   </a>
                </li>
                <li>
-                  <a href="https://www.facebook.com/SportsAuthority" target="_blank" id="tsaFacebook" className="tsa-social-icon">
+                  <a href="https://www.facebook.com/" target="_blank" id="tsaFacebook" className="tsa-social-icon">
                   </a>
                </li>
                <li className="largeSwitch">
@@ -111,15 +115,15 @@ class Footer extends Component{
                   <div id="tsaStadium"></div>
                </li>
                <li>
-                  <a href="https://www.pinterest.com/sportsauthority/" target="_blank" id="tsaPinterest" className="tsa-social-icon">
+                  <a href="https://www.pinterest.com/" target="_blank" id="tsaPinterest" className="tsa-social-icon">
                   </a>
                </li>
                <li>
-                  <a href="https://www.youtube.com/user/sportsauthority" target="_blank" id="tsaYouTube" className="tsa-social-icon">
+                  <a href="https://www.youtube.com/user/" target="_blank" id="tsaYouTube" className="tsa-social-icon">
                   </a>
                </li>
                <li>
-                  <a href="https://plus.google.com/+sportsauthority/posts" target="_blank" id="tsaGooglePlus" className="tsa-social-icon">
+                  <a href="https://plus.google.com/" target="_blank" id="tsaGooglePlus" className="tsa-social-icon">
                   </a>
                </li>
             </ul>

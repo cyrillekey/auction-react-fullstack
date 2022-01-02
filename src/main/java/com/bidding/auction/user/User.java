@@ -1,3 +1,6 @@
+/**
+ * class that maps to a user and represents a user bean and table
+ */
 package com.bidding.auction.user;
 
 import java.util.Date;
@@ -21,35 +24,43 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-@Entity
+@Entity//specifies it is a table
 public class User {
-    @Id
-    @GeneratedValue
-    private Integer userId;
-    @NotNull
-    @Column(unique = true)
-    private String username;
-    @NotNull
-    @Column(unique = true)
-    private String email;
-    @Size(min = 6)
-    private String password;
-    @Past
-    private Date datejoined;
-    @JsonIgnore
-    @OneToMany(mappedBy = "userProduct")
-    private List<Product>products;
-    @JsonIgnore
-    @OneToMany(mappedBy="user")
-    private List<Bid> bids;
-    @OneToMany(mappedBy="userTrans")
-    private List<Transaction> transactions;
-    @JsonIgnore
-    @ManyToMany
-    private List<Event> events;
+    @Id//specifies it is the primary key for the table
+    @GeneratedValue//specifies value is auto generated
+    private Integer userId;//id of the user
+    @NotNull//specifies value should not be null
+    @Column(unique = true)//specifies each value should be unique
+    private String username;//username of the user
+    @NotNull//specify email should not ne null
+    @Column(unique = true)//email should ne unique
+    private String email;//email of the user
+    @Size(min = 6)//specifies minimum size of the password
+    private String password;//password of the user
+    @Past//constraint date joined is in the past
+    private Date datejoined;//date the user joined
+    @JsonIgnore//field will be neglected in response
+    @OneToMany(mappedBy = "userProduct")//one to many relationship mapping with the products
+    private List<Product>products;//list of products the user has uploades
+    @JsonIgnore//ignore field in response
+    @OneToMany(mappedBy="user")//maps a one to many realtionship with bids
+    private List<Bid> bids;//list of bids placed by the user
+    @OneToMany(mappedBy="userTrans")//maps to transactions by the user
+    private List<Transaction> transactions;//list of transactions by the user
+    @JsonIgnore//ignore field in response
+    @ManyToMany//maps a many to many relationship to events
+    private List<Event> events;//list of events the user belongs to
     User(){
         
     }
+    /**
+     * default contructor used when the object is created
+     * @param userId
+     * @param username
+     * @param email
+     * @param passoword
+     * @param datejoined
+     */
     public User(Integer userId,String username,String email,String passoword,Date datejoined){
         this.userId=userId;
         this.username=username;
@@ -57,6 +68,10 @@ public class User {
         this.password=passoword;
         this.datejoined=datejoined;
     }
+    /**
+     * 
+     * getters and setters for the user class
+     */
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
