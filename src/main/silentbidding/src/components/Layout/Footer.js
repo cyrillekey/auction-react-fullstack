@@ -47,10 +47,10 @@ class Footer extends Component{
                   </p>
                </div>
                <div className="tsa-feedback-button mobileSwitch">
-                  <a href="12@mail.com">Contact Us</a>
+                  <a href="mailto: 12@mail.com">Contact Us</a>
                </div>
                <div className="tsa-feedback-button largeSwitch">
-                  <a href="12@mail.com">Contact Us / Send Feedback</a>
+                  <a href="mailto: 12@mail.com">Contact Us / Send Feedback</a>
                </div>
             </div>
             
