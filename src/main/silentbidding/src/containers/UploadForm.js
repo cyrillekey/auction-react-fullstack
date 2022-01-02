@@ -60,7 +60,7 @@ class UploadForm extends Component{
             });
             axios({
                 method:'post',
-                url:'http://localhost:8080/add-new-product/'+localStorage.getItem('email'),
+                url:'https://silentbiddingapp.herokuapp.com/add-new-product/'+localStorage.getItem('email'),
                 data:formData,
                 headers:{
                     "Content-Type":"application/json"

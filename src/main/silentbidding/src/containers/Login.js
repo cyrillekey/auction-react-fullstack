@@ -83,7 +83,7 @@ class Login extends Component{
      */
     axios({
       method:"post",
-      url:"http://localhost:8080/login-user",
+      url:"https://silentbiddingapp.herokuapp.com/login-user",
       data:bodyFormData,
       headers:{
         "Content-Type":"application/json"

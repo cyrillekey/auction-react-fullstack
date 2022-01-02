@@ -96,7 +96,7 @@ class Signup extends Component{
       })
       axios({
         method:"post",
-        url:'http://localhost:8080/register-new',//send post request to create user request
+        url:'https://silentbiddingapp.herokuapp.com/register-new',//send post request to create user request
         data:bodyFormData,
         headers:{
           "Content-Type":"application/json"

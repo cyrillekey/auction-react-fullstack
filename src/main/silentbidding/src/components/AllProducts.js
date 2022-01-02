@@ -13,7 +13,7 @@ class AllProducts extends Component{
         /**
          * get request to get all products from the rest web service
          */
-        axios.get("http://localhost:8080/all-products")
+        axios.get("https://silentbiddingapp.herokuapp.com/all-products")
         .then(res=>{
             const items=res.data
             /**
